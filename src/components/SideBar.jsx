@@ -19,7 +19,7 @@ export default function SideBar() {
     },
   ]
   return (
-    <div className='sidebar pt-20 pr-8 text-sm tracking-widest uppercase h-full w-auto sticky top-0 left-0'>
+    <div className='sidebar pt-20 pr-8 text-sm uppercase h-full w-auto sticky top-0 left-0'>
       <nav className='h-full'>
         <ul className='h-full flex flex-col justify-start items-center'>
           {items.map(({ key, url, icon, title }) => (

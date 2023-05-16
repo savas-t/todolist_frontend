@@ -18,7 +18,7 @@ export default function NewList() {
           Name
         </label>
         <input
-          className='border-[1px] focus:outline-none w-full max-w-[700px] border-black px-4 py-2'
+          className='border-[1px] tracking-widest focus:outline-none w-full max-w-[700px] border-black px-4 py-2'
           type='text'
           name='name'
           id='name'
@@ -33,16 +33,19 @@ export default function NewList() {
           Beschreibung
         </label>
         <input
-          className='border-[1px] focus:outline-none w-full max-w-[700px] border-black px-4 py-2'
+          className='border-[1px] tracking-widest focus:outline-none w-full max-w-[700px] border-black px-4 py-2'
           type='text'
           name='beschreibung'
           id='beschreibung'
         />
       </div>
-      <Button
-        title={'Absenden'}
-        icon={<RiArrowRightLine />}
-      />
+
+      <div className="self-end pt-8">
+        <Button
+          title={'Erstellen'}
+          icon={<RiArrowRightLine />}
+        />
+      </div>
     </form>
   )
 }
