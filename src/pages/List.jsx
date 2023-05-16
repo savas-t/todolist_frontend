@@ -1,5 +1,9 @@
 import { Link } from 'react-router-dom'
-import { RiBallPenLine, RiDeleteBinLine, RiArrowRightLine } from 'react-icons/ri'
+import {
+  RiBallPenLine,
+  RiDeleteBinLine,
+  RiArrowRightLine,
+} from 'react-icons/ri'
 
 export default function List({ id, name, description }) {
   const listActions = [
@@ -28,7 +32,9 @@ export default function List({ id, name, description }) {
             className='p-3 mx-1 first:ml-0 last:mr-0 active:opacity-50 group transition-all border-black border-[1px] rounded-full flex justify-center items-center'
           >
             {icon}
-            <p className='absolute bg-white z-[2] opacity-0 group-hover:opacity-100 group-active:opacity-0 text-xs bottom-[-50%] py-1 px-2 border-black border-[1px]'>{title}</p>
+            <p className='absolute whitespace-nowrap bg-white z-[2] opacity-0 group-hover:opacity-100 group-active:opacity-0 text-xs bottom-[-50%] py-1 px-2 border-black border-[1px]'>
+              {title}
+            </p>
           </Link>
         ))}
       </div>
