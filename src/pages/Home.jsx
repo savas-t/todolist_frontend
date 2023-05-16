@@ -20,7 +20,7 @@ export default function Home() {
         titleToNew={'Neue Liste'}
         urlToNew={'/list/new'}
       />
-      <div className='grid grid-cols-3 grid-flow-row gap-4'>
+      <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4'>
         {lists.map(({ key, id, name, description }) => (
           <List
             key={key}

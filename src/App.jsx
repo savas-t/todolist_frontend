@@ -11,7 +11,7 @@ export default function App() {
   return (
     <>
       <div className='app tracking-widest w-full h-fit'>
-        <div className='mx-auto w-full max-w-[1200px] h-full flex shrink-0 justify-between items-start relative'>
+        <div className='mx-auto w-full max-w-[1200px] h-full flex flex-col md:flex-row shrink-0 justify-between items-start relative'>
           <SideBar />
           <Main>
             <Routes>

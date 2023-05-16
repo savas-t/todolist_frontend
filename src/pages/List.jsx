@@ -21,7 +21,7 @@ export default function List({ id, name, description }) {
     },
   ]
   return (
-    <div className='list main py-2 px-8 transition-all border-black border-[1px] flex flex-col w-full'>
+    <div className='list main py-10 px-8 transition-all border-black border-[1px] flex flex-col w-full min-w-[200px]'>
       <h2 className='text-md pb-8 cursor-default'>{name}</h2>
       <p className='text-sm pb-8 cursor-default'>{description}</p>
       <div className='list__actions py-2 flex'>
