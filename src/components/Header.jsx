@@ -3,7 +3,7 @@ import { RiAddLine } from 'react-icons/ri'
 
 export default function Header({ title, titleToNew, urlToNew }) {
   return (
-    <div className='pb-8 flex justify-between items-center'>
+    <div className='pb-8 flex justify-between items-center min-h-[74px]'>
       <h1 className='text-xl'>{title}</h1>
       {urlToNew && (
         <Link
