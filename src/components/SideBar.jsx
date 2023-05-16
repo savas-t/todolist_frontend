@@ -26,7 +26,7 @@ export default function SideBar() {
             <Link
               key={key}
               to={url}
-              className={`sidebar__item ${activeItem === key ? 'sidebar__item--active' : ''} w-full my-2 first:my-0 border-slate-800 active:opacity-30 border-[1px] whitespace-nowrap px-8 py-4 cursor-pointer transition-all`}
+              className={`sidebar__item ${activeItem === key ? 'sidebar__item--active' : ''} w-full my-2 first:my-0 border-slate-800 active:opacity-50 border-[1px] whitespace-nowrap px-8 py-4 cursor-pointer transition-all`}
               onClick={() => setActiveItem(key)}
             >
               <li
