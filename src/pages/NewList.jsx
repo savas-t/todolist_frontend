@@ -1,15 +1,45 @@
+import axios from 'axios'
 import Button from '../components/Button'
 import Header from '../components/Header'
 import { RiArrowRightLine } from 'react-icons/ri'
+import { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 export default function NewList() {
   const host = 'http://localhost:5000/todo-list'
+
+  // Automatic navigator
+  const navigate = useNavigate()
+
+  // Input value states
+  const [name, setName] = useState('')
+  const [beschreibung, setBeschreibung] = useState('')
+
+  /**
+   * callback to submit POST request
+   * @param {*} event
+   */
+  const handleSubmit = (event) => {
+    event.preventDefault()
+
+    axios
+      .post(host, {
+        name: name,
+        beschreibung: beschreibung,
+      })
+      .then((response) => {
+        // TODO: Handle response
+        navigate('/')
+      })
+      .catch((error) => {
+        // TODO: Handle error
+      })
+  }
 
   return (
     <>
       <Header title={'Neue Liste'} />
       <form
-        action={host}
         method='POST'
         className='w-full flex flex-col items-start justify-start'
       >
@@ -25,6 +55,7 @@ export default function NewList() {
             type='text'
             name='name'
             id='name'
+            onChange={(event) => setName(event.target.value)}
           />
         </div>
 
@@ -40,13 +71,15 @@ export default function NewList() {
             type='text'
             name='beschreibung'
             id='beschreibung'
+            onChange={(event) => setBeschreibung(event.target.value)}
           />
         </div>
 
-        <div className="self-end pt-8">
+        <div className='self-end pt-8'>
           <Button
             title={'Erstellen'}
             icon={<RiArrowRightLine />}
+            onClick={handleSubmit}
           />
         </div>
       </form>
