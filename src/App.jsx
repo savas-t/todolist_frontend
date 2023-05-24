@@ -1,11 +1,10 @@
 import './assets/scss/index.scss'
 import SideBar from './components/SideBar'
 import Main from './components/Main'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
-import List from './pages/List'
 import Overview from './pages/Overview'
 import NewList from './pages/NewList'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function App() {
   return (
@@ -18,10 +17,6 @@ export default function App() {
               <Route
                 path='/'
                 element={<Home />}
-              />
-              <Route
-                path='/list'
-                element={<List />}
               />
               <Route
                 path='/list/new'
