@@ -1,13 +1,20 @@
-import { Link } from 'react-router-dom'
+import axios from 'axios'
 import { ActionButton, ActionLink } from './Action'
+import { RiDeleteBinLine, RiArrowRightLine } from 'react-icons/ri'
 
-import {
-  RiBallPenLine,
-  RiDeleteBinLine,
-  RiArrowRightLine,
-} from 'react-icons/ri'
+export default function List({ id, name, setDataChange }) {
+  const host = 'http://localhost:5000'
 
-export default function List({ id, name }) {
+  const deleteList = async () => {
+    try {
+      const response = await axios.delete(host + `/todo-list/${id}`)
+      setDataChange(true)
+    } catch (error) {
+      // Show error modal
+      alert('Das hat nicht geklappt.')
+    }
+  }
+
   return (
     <div className='list main p-6 transition-all border-black border-[1px] flex flex-col justify-between w-full min-w-[200px]'>
       <h2 className='text-md pb-8 cursor-default'>{name}</h2>
@@ -15,7 +22,7 @@ export default function List({ id, name }) {
         <ActionButton
           title={'Löschen'}
           icon={<RiDeleteBinLine />}
-          action={() => console.log('hi')}
+          action={deleteList}
         />
         <ActionLink
           title={'Ansehen'}
