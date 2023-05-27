@@ -39,9 +39,9 @@ export default function Home() {
     }
   }, [])
 
-  if (loading === true) return <h1>Datenabfrage ...</h1>
+  if (loading) return <h1>Datenabfrage ...</h1>
 
-  if (fetchError === true)
+  if (fetchError)
     return <ErrorWrapper message='Konnte keine Daten abfragen :(' />
 
   return (
@@ -52,9 +52,9 @@ export default function Home() {
         urlToNew={'/list/new'}
       />
       <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 grid-flow-row gap-4'>
-        {lists.map(({ key, id, name }) => (
+        {lists.map(({ id, name }) => (
           <List
-            key={key}
+            key={id}
             id={id}
             name={name}
           />
