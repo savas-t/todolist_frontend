@@ -1,5 +1,6 @@
 import axios from 'axios'
 import Header from '../components/Header'
+import Loading from '../components/Loading'
 import ErrorWrapper from '../components/ErrorWrapper'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
@@ -51,7 +52,7 @@ export default function List() {
     }
   }, [])
 
-  if (loading) return <h1>Datenabfrage ...</h1>
+  if (loading) return <Loading />
 
   if (fetchError)
     return <ErrorWrapper message='Konnte keine Daten abfragen :(' />

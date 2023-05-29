@@ -1,6 +1,7 @@
 import axios from 'axios'
 import List from '../components/List'
 import Header from '../components/Header'
+import Loading from '../components/Loading'
 import ErrorWrapper from '../components/ErrorWrapper'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
@@ -45,7 +46,7 @@ export default function Home() {
     }
   }, [dataChange])
 
-  if (loading) return <h1>Datenabfrage ...</h1>
+  if (loading) return <Loading />
 
   if (fetchError)
     return <ErrorWrapper message='Konnte keine Daten abfragen :(' />
