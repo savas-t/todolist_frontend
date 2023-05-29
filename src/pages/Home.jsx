@@ -12,6 +12,10 @@ export default function Home() {
   const [fetchError, setFetchError] = useState(false)
   const [loading, setLoading] = useState(false)
 
+  const handleDataChange = () => {
+    setDataChange(true)
+  }
+
   useEffect(() => {
     const abortController = new AbortController()
     const signal = AbortController.signal
@@ -59,7 +63,7 @@ export default function Home() {
             key={id}
             id={id}
             name={name}
-            setDataChange={setDataChange}
+            onDataChange={handleDataChange}
           />
         ))}
       </div>

@@ -2,13 +2,13 @@ import axios from 'axios'
 import { ActionButton, ActionLink } from './Action'
 import { RiDeleteBinLine, RiArrowRightLine } from 'react-icons/ri'
 
-export default function List({ id, name, setDataChange }) {
+export default function List({ id, name, onDataChange }) {
   const host = 'http://localhost:5000'
 
   const deleteList = async () => {
     try {
       const response = await axios.delete(host + `/todo-list/${id}`)
-      setDataChange(true)
+      onDataChange()
     } catch (error) {
       // Show error modal
       alert('Das hat nicht geklappt.')
