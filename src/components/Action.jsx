@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-function ActionButton({ title, icon, action }) {
+const ActionButton = ({ title, icon, action }) => {
   return (
     <button
       onClick={action}
@@ -14,7 +14,7 @@ function ActionButton({ title, icon, action }) {
   )
 }
 
-function ActionLink({ title, icon, url }) {
+const ActionLink = ({ title, icon, url }) => {
   return (
     <Link
       to={url}

@@ -2,7 +2,7 @@ import { RiFileList2Line, RiCheckboxMultipleLine } from 'react-icons/ri'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
 
-export default function SideBar() {
+const SideBar = () => {
   const [activeItem, setActiveItem] = useState(1)
   const items = [
     {
@@ -45,3 +45,5 @@ export default function SideBar() {
     </div>
   )
 }
+
+export default SideBar

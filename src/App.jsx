@@ -8,7 +8,7 @@ import NewList from './pages/NewList'
 import NewEntry from './pages/NewEntry'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
-export default function App() {
+const App = () => {
   return (
     <BrowserRouter>
       <div className='app tracking-widest w-full h-fit'>
@@ -44,3 +44,5 @@ export default function App() {
     </BrowserRouter>
   )
 }
+
+export default App

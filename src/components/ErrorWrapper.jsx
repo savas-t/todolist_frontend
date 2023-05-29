@@ -1,4 +1,4 @@
-export default function ErrorWrapper({ message, status }) {
+const ErrorWrapper = ({ message, status }) => {
   return (
     <div className='w-full h-full'>
       <h1>{message}</h1>
@@ -6,3 +6,5 @@ export default function ErrorWrapper({ message, status }) {
     </div>
   )
 }
+
+export default ErrorWrapper

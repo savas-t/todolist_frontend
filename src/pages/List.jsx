@@ -5,7 +5,7 @@ import ErrorWrapper from '../components/ErrorWrapper'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-export default function List() {
+const List = () => {
   const host = 'http://localhost:5000'
 
   // URL parameters
@@ -83,3 +83,5 @@ export default function List() {
     </>
   )
 }
+
+export default List

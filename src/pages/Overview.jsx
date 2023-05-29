@@ -1,5 +1,7 @@
 import Header from '../components/Header'
 
-export default function Overview() {
+const Overview = () => {
   return <Header title={'Alle to Dos'} />
 }
+
+export default Overview

@@ -6,7 +6,7 @@ import ErrorWrapper from '../components/ErrorWrapper'
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 
-export default function Home() {
+const Home = () => {
   const host = 'http://localhost:5000'
   const [lists, setLists] = useState([])
   const [dataChange, setDataChange] = useState(false)
@@ -71,3 +71,5 @@ export default function Home() {
     </>
   )
 }
+
+export default Home

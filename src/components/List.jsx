@@ -2,7 +2,7 @@ import axios from 'axios'
 import { ActionButton, ActionLink } from './Action'
 import { RiDeleteBinLine, RiArrowRightLine } from 'react-icons/ri'
 
-export default function List({ id, name, onDataChange }) {
+const List = ({ id, name, onDataChange }) => {
   const host = 'http://localhost:5000'
 
   const deleteList = async () => {
@@ -33,3 +33,5 @@ export default function List({ id, name, onDataChange }) {
     </div>
   )
 }
+
+export default List

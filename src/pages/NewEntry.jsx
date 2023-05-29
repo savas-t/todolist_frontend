@@ -5,7 +5,7 @@ import { RiArrowRightLine } from 'react-icons/ri'
 import { useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 
-export default function NewEntry() {
+const NewEntry = () => {
   const host = 'http://localhost:5000'
 
   // Grab List id
@@ -83,3 +83,5 @@ export default function NewEntry() {
     </>
   )
 }
+
+export default NewEntry

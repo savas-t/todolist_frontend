@@ -5,7 +5,7 @@ import { RiArrowRightLine } from 'react-icons/ri'
 import { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-export default function NewList() {
+const NewList = () => {
   const host = 'http://localhost:5000'
 
   // Automatic navigator
@@ -63,3 +63,5 @@ export default function NewList() {
     </>
   )
 }
+
+export default NewList
