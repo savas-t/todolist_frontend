@@ -5,7 +5,6 @@ import Home from './pages/Home'
 import List from './pages/List'
 import Overview from './pages/Overview'
 import NewList from './pages/NewList'
-import NewEntry from './pages/NewEntry'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 const App = () => {
@@ -28,10 +27,6 @@ const App = () => {
               <Route
                 path='/list/new'
                 element={<NewList />}
-              />
-              <Route
-                path='/list/:id/entry/new'
-                element={<NewEntry />}
               />
               <Route
                 path='/overview'
