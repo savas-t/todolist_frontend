@@ -17,7 +17,7 @@ const NewEntry = ({ id, onDataChange }) => {
 
   const addEntry = async () => {
     try {
-      const response = await axios.post(host + `/todo-list/${id}/entry`, {
+      await axios.post(host + `/todo-list/${id}/entry`, {
         name,
         beschreibung,
       })

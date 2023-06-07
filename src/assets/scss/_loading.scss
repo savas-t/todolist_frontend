@@ -1,38 +1,34 @@
 .loading {
-  width: 64px;
-  height: 16px;
-  animation: bubble 0.4s ease-out infinite;
+  @apply w-16 h-16 rounded-full flex justify-center items-center;
+  animation: rotation 1s ease-in-out infinite;
+  background: linear-gradient(45deg, #0fe4fc, transparent 90%);
 
   &::before {
+    @apply w-[54px] h-[54px] rounded-full bg-white;
     content: '';
-    display: block;
-    width: 100%;
-    height: 50%;
-    transform: matrix(1, 0, 1, 1, 0, 0);
-    background: linear-gradient(90deg, #fc0fe8, #168afe);
-  }
-
-  &::after {
-    content: '';
-    display: block;
-    width: 100%;
-    height: 50%;
-    transform: matrix(1, 0, -1, 1, 0, 0);
-    background: linear-gradient(90deg, #fc0fe8, #168afe);
   }
 }
 
 @keyframes bubble {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
   50% {
     opacity: 1;
-    transform: translateX(0);
+    transform: translateY(0);
   }
   100% {
     opacity: 0;
-    transform: translateX(100%);
+    transform: translateY(100%);
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

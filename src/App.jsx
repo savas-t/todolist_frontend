@@ -12,7 +12,7 @@ const App = () => {
     <BrowserRouter>
       <div className='app tracking-widest w-full h-fit'>
         <div className='gradient'></div>
-        <div className='mx-auto w-full max-w-[1200px] h-full flex flex-col md:flex-row shrink-0 justify-between items-start relative'>
+        <div className='mx-auto w-full px-6 max-w-[1200px] h-full flex flex-col md:flex-row shrink-0 justify-between items-start relative'>
           <SideBar />
           <Main>
             <Routes>
